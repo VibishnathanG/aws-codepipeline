@@ -34,6 +34,16 @@ Resources:
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
+  NexusContainerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: ContainerSecurityGroup
+      GroupDescription: Security group for NGINX container
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 81
+          ToPort: 81
+          CidrIp: 0.0.0.0/0
   TaskDefinition:
     Type: AWS::ECS::TaskDefinition
     Properties:
