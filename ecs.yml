@@ -37,8 +37,8 @@ Resources:
   NexusContainerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupName: ContainerSecurityGroup
-      GroupDescription: Security group for NGINX container
+      GroupName: NexusContainerSecurityGroup
+      GroupDescription: Security group for nexus container
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 81
